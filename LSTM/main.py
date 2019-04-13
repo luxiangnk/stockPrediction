@@ -103,7 +103,7 @@ def train_lstm(batch_size=80,time_step=15,train_begin=2000,train_end=5800):
                 _,loss_=sess.run([train_op,loss],feed_dict={X:train_x[batch_index[step]:batch_index[step+1]],Y:train_y[batch_index[step]:batch_index[step+1]]})
             print(i,loss_)
             if i % 200==0:
-                print("保存模型：",saver.save(sess,'../output/stock.model',global_step=i))
+                print("save model：",saver.save(sess,'../output/stock.model',global_step=i))
 
 
 #train_lstm()
